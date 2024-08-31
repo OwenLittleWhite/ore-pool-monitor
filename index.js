@@ -1,5 +1,6 @@
 const { Connection, PublicKey, LAMPORTS_PER_SOL } = require("@solana/web3.js");
 const fs = require("fs");
+const path = require("path");
 const exec = require("child_process").exec;
 
 // Solana 主网连接

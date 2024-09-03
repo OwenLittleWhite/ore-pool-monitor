@@ -15,7 +15,12 @@ const walletsToMonitor = {
     "2CmzZ7yq2JqY8aeaNiPidbVVrbcbwT2Aj8a7q45scNdL": {
         directory: "/root/ore-hq-server/server2",
         scriptPath: "restart2.sh"
-    }
+    },
+    "9kWvadYS1iBKwZQtzqhrvjcRmKRG29Tc7cARVYS6vk8m": {
+            directory: "/root/ore-hq-server/server3",
+            scriptPath: "restart3.sh"
+    },
+    
     // 添加更多的地址和脚本
 };
 

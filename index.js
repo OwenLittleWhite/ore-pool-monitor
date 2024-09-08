@@ -2,27 +2,13 @@ const { Connection, PublicKey, LAMPORTS_PER_SOL } = require("@solana/web3.js");
 const fs = require("fs");
 const path = require("path");
 const exec = require("child_process").exec;
+const addressConfig = require("./config.json")
 
 // Solana 主网连接
 const connection = new Connection("https://mainnet.helius-rpc.com/?api-key=5380ee8b-50f2-47f6-b400-c1a888346df7", "confirmed");
 
 // 监控的钱包地址及其对应的执行脚本路径
-const walletsToMonitor = {
-    "2efeLemAKwpnWjs3vdkAcYTaH6RVmXLeULtNp4JScHjR": {
-        directory: "/root/ore-hq-server/server1",
-        scriptPath: "restart1.sh"
-    },
-    "2CmzZ7yq2JqY8aeaNiPidbVVrbcbwT2Aj8a7q45scNdL": {
-        directory: "/root/ore-hq-server/server2",
-        scriptPath: "restart2.sh"
-    },
-    "9kWvadYS1iBKwZQtzqhrvjcRmKRG29Tc7cARVYS6vk8m": {
-            directory: "/root/ore-hq-server/server3",
-            scriptPath: "restart3.sh"
-    },
-    
-    // 添加更多的地址和脚本
-};
+const walletsToMonitor = addressConfig
 
 // 检查Solana钱包的余额和最后交易时间
 async function checkBalanceAndLastTx(walletAddress, scriptPath, directory) {
@@ -40,7 +26,7 @@ async function checkBalanceAndLastTx(walletAddress, scriptPath, directory) {
             commitment: "confirmed",
             limit: 1
         });
-        const lastTxTime = signatures.length > 0 ? new Date(signatures[0].blockTime*1000) : null;
+        const lastTxTime = signatures.length > 0 ? new Date(signatures[0].blockTime * 1000) : null;
 
         console.log(`Balance: ${balanceInSol} SOL, Last Transaction Time: ${lastTxTime ? lastTxTime.toISOString() : 'No transactions found'} for address ${walletAddress}`);
 
@@ -87,5 +73,5 @@ setInterval(() => {
 // 立即执行一次
 Object.keys(walletsToMonitor).forEach(async (address) => {
     const { scriptPath, directory } = walletsToMonitor[address];
-        await checkBalanceAndLastTx(address, scriptPath, directory);
+    await checkBalanceAndLastTx(address, scriptPath, directory);
 });

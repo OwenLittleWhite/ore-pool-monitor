@@ -1,14 +1,32 @@
 {
-    "2efeLemAKwpnWjs3vdkAcYTaH6RVmXLeULtNp4JScHjR": {
-        "directory": "/root/ore-hq-server/server1",
-        "scriptPath": "restart1.sh"
+    "E7MYuAA3RS87CtKrvPhN9r3Xu1kSWd3LSPWi8mviq8DJ": {
+        "directory": "/root/servers/pool1",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
     },
-    "2CmzZ7yq2JqY8aeaNiPidbVVrbcbwT2Aj8a7q45scNdL": {
-        "directory": "/root/ore-hq-server/server2",
-        "scriptPath": "restart2.sh"
+    "8dhyDkwekdYC6QFpGrzTtCB95RwsK6TinMiC8HhW9DrA": {
+        "directory": "/root/servers/pool2",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
     },
-    "9kWvadYS1iBKwZQtzqhrvjcRmKRG29Tc7cARVYS6vk8m": {
-        "directory": "/root/ore-hq-server/server3",
-        "scriptPath": "restart3.sh"
+    "2dCPxsidcqtt3VduDpDG2PEDCZtHko6BZzGMEvTsFEuT": {
+        "directory": "/root/servers/pool3",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
+    },
+    "BAfZc1cwWfSCPGLhXdzNCMojHZes1S5D6wpZJ7LYdMYu": {
+        "directory": "/root/servers/pool4",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
+    },
+    "4SyzbmFBJ133u17DBYAn8m5x4LA22Lc6onUWBcZs8HRf": {
+        "directory": "/root/servers/pool5",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
+    },
+    "3qevjWzjpHEmqApxufKrwCxU9qbaio3HRuGdhWXG5sdY": {
+        "directory": "/root/servers/pool6",
+        "scriptPath": "restart.sh",
+        "payAccount": "pay1.json"
     }
 }
